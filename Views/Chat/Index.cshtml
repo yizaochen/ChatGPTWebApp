@@ -1,0 +1,18 @@
+@model string
+<h2>Chat with GPT</h2>
+
+<form method="post" asp-action="Ask">
+    <div>
+        <label for="prompt">Enter your prompt:</label>
+        <input type="text" id="prompt" name="prompt" />
+        <button type="submit">Ask</button>
+    </div>
+</form>
+
+@if (ViewBag.Response != null)
+{
+    <div>
+    <h3>Response:</h3>
+    <p>@ViewBag.Response</p>
+</div>
+}
